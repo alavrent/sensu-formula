@@ -15,7 +15,7 @@ sensu:
     - file: /etc/apt/sources.list.d/sensu.list
     - key_url: http://repositories.sensuapp.org/apt/pubkey.gpg
     {% elif grains['os_family'] == 'RedHat' %}
-    - baseurl: http://repositories.sensuapp.org/yum/el/$releasever/$basearch/
+    - baseurl: http://repositories.sensuapp.org/yum/$basearch/
     - gpgcheck: 0
     - enabled: 1
     {% endif %}
